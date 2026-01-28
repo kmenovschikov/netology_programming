@@ -1,10 +1,25 @@
 todo = {}
 
-print('Добавьте список дел! Для выхода введите 0 в поле Дата')
+print('Введите команду:\n'
+      'help - справка\n'
+      'add - добавить задачу\n'
+      'show - показать все задачи\n'
+      'exit - выход')
 while True:
-    date = input('Дата: ')
-    if date == '0':
+    cmd = input('>: ')
+    if cmd == 'exit':
         break
-    todo[date] = input('Задача: ')
-
-print(todo)
+    elif cmd == 'help':
+        print('Справка')
+    elif cmd == 'add':
+        date = input('Дата:')
+        task = input('Задача:')
+        if date in todo:
+            todo[date].append(task)
+        else:
+            todo[date] = []
+            todo[date].append(task)
+    elif cmd == 'show':
+        print(todo)
+    else:
+        print('Неверная команда')
