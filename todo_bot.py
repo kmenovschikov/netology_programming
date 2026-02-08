@@ -1,6 +1,6 @@
 # Сначала создать бот через BotFather
 import telebot
-
+token = 'suda_api_token'
 bot = telebot.TeleBot(token)
 
 todo = {}
