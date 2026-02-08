@@ -1,6 +1,6 @@
 # Сначала создать бот через BotFather
 import telebot
-token = '7917317648:AAGmUHdiTNEkZUtLt8tSGuOlzt_PhFVzwTE'
+
 bot = telebot.TeleBot(token)
 
 todo = {}
