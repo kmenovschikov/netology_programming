@@ -39,6 +39,13 @@ if [[ ( -z $INTERFACE ) || (! -z $INTERFACE && -z $PREFIX ) ]]; then
 	exit 1;
 fi;
 
+if [[ $PREFIX =~ ^((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])\.(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9]))$ ]]; then
+	echo "OK"
+else
+	echo "ZNACHENIE PREFIX NE SOOTVETSTVUET INTERVALU 0..255.0..255"
+	exit 1;
+fi;
+
 echo -e "INTERFACE=$INTERFACE\nPREFIX=$PREFIX\nSUBNET=$SUB_OT..$SUB_DO\nHOST=$HOST_OT..$HOST_DO"
 echo ">>> Programa gotova k zapusku <<<"
 
