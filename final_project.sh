@@ -1,4 +1,4 @@
-#/bin/bash/
+#!/bin/bash
 
 echo "Программа может быть запущена в двух режимах - 1) Обычный 2) С параметрами"
 echo "cmdline, environ, limits, mounts, status, cwd, fd, fdinfo, root"

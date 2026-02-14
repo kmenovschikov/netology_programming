@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 readarray -t lines < "/proc/bus/input/devices"
 
